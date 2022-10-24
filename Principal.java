@@ -19,6 +19,11 @@ public class Principal {
         Auto a2;
         System.out.println(a2);//Observamos que al querer operar con a2 creyendo que es un objeto no encontramos con un error 
                                 //que nos dice que a2 en realidad es una varible(tipo auto) sin inicializar,como cualquier otra variable si no le damos un valor inicial simplemente no copila el programa
+
+
+      //Como a2 es una variable de tipo Auto entonces obviamente no se podra asignar nada que no sea un Auto(Hablando de la clase)
+      //Como por ejemplo un tipo String
+      a2="Hola";//saldra error                          
     }
 }
 
