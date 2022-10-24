@@ -4,52 +4,23 @@ public class Principal {
         
         new Auto();
 
-        Auto a;
-
-        a=new Auto();
-
-        System.out.println(a);//Saldra por pantalla que hay guardado realmente dentro de la variable "a"
+        Auto a=new Auto();//La parte (Auto a)es un objeto?
 
 
+        System.out.println(a);
         a.patente="ABC123";
         a.color="Verde";
         a.kms=500;
         a.conAire=true;
-
         System.out.println(a);
 
+        //Para demostrar que (Auto a) no es un objeto declararemos lo siguiente
 
-    
-        Auto a2 = new Auto();
-        System.out.println(a2);//Mostrara el contenido de a2
-        
-    
-        a2.patente="DDFG123";
-        a2.color="Azul";
-        a2.kms=100;
-        a2.conAire=true;
-
-        System.out.println(a2);
-    
+        Auto a2;
+        System.out.println(a2);//Observamos que al querer operar con a2 creyendo que es un objeto no encontramos con un error 
+                                //que nos dice que a2 en realidad es una varible(tipo auto) sin inicializar,como cualquier otra variable si no le damos un valor inicial simplemente no copila el programa
     }
 }
 
-//Veremos en al terminal lo siguiente
-
-//Auto@36baf30c 
-//Auto@36baf30c
-//Auto@7a81197d
-//Auto@7a81197d
-
-//Las dos primeras impresiones de la variable a nos dio lo mismo Auto@36baf30c
-//Las segundas impresiones de la variables a2 nos dio igual Auto@7a81197d
-
-//Lo que estamos viendo,se llama IDENTIFICADOR ,lo que guarda la variable realmente  es un identificador del objeto NO todo el objeto
-
-//Auto@ (NOMBRE DE LA CLASE)
-//36baf30c (IDENTIFICADOR DE LA CLASE)
-
-//La identificacion nos permite ver que los objetos se manejan por referencia  y para no perder esa referencia nos la guardamos en una variable de manera tal
-//de no perder la forma de llegar a su valores guardados
 
 
