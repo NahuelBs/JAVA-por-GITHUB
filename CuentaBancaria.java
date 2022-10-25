@@ -8,8 +8,11 @@ public class CuentaBancaria {
 
     void mostrarDatos(){//todos los objetos cuenta bancaria podran realizar este metodo
 
-        System.out.println(cb.CBU +" "+ cb.alias +" "+ cb.saldo);//me sale error si copio y pego la lineas que estaban en la clase main,ya que cb no esta declarado en cuenta bancaria
-                                                                //un metodo de la clase cuenta bancaria es directamente accesible a sus atributos
+        System.out.println(CBU +" "+ alias +" "+ saldo);//un metodo de la clase cuenta bancaria es directamente accesible a sus atributos
+
+    }
+
+    double obtenerSaldo(){//nos sale error,ya que ,como este metodo nos tiene que devolver algo distinto de vacio,necesitamos si o si la clausula return 
 
     }
 }
