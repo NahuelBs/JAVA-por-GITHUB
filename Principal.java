@@ -4,26 +4,20 @@ public class Principal {
         
         new Auto();
 
-        Auto a=new Auto();//La parte (Auto a)es un objeto?
+        Auto a=new Auto();
 
-
-        System.out.println(a);
         a.patente="ABC123";
         a.color="Verde";
         a.kms=500;
         a.conAire=true;
-        System.out.println(a);
-
-        //Para demostrar que (Auto a) no es un objeto declararemos lo siguiente
 
         Auto a2;
-        System.out.println(a2);//Observamos que al querer operar con a2 creyendo que es un objeto no encontramos con un error 
-                                //que nos dice que a2 en realidad es una varible(tipo auto) sin inicializar,como cualquier otra variable si no le damos un valor inicial simplemente no copila el programa
+        System.out.println(a2);//observamos que nos sale error al querer mostrar a2,y nos dice que dicha variable no esta inicializada
+        //que no este inicializada nos idica que NO tiene un valor por defecto  
 
+        a2=a;//Ahora en a2 guardamos a
 
-      //Como a2 es una variable de tipo Auto entonces obviamente no se podra asignar nada que no sea un Auto(Hablando de la clase)
-      //Como por ejemplo un tipo String
-      a2="Hola";//saldra error                          
+        System.out.println(a2);//observemos que para mostrar a2 en esta line,no sale con error eso sucede ya que la estoy inicializando antes es decir le di un valor para que pueda mostrar
     }
 }
 
