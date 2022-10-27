@@ -11,13 +11,10 @@ public class Principal {
 
         cb.obtenerSaldo();
 
-        //Al ejecutar el programa no nos saldra nada,ya que el metodo nos devuelve un valor,el cual se esta perdiendo
-        //Para evitar esto podemos hacer de dos maneras
 
-        System.out.println(cb.obtenerSaldo());//podemos mostrar directamente
-
-        double x =cb.obtenerSaldo();//o guardarla en una variable y mostarar x
-        System.out.println(x);
+        System.out.println(cb.obtenerSaldo());
+        cb.depositar(200);//Este 200 se convertira en parametro cuando llamemos al metodo depositar,en la clase principal esos 200 se lo llama argumento
+        System.out.println(cb.obtenerSaldo());
 
     }
 }
