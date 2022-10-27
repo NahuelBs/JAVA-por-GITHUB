@@ -13,8 +13,14 @@ public class Principal {
 
 
         System.out.println(cb.obtenerSaldo());
-        cb.depositar(200);//Este 200 se convertira en parametro cuando llamemos al metodo depositar,en la clase principal esos 200 se lo llama argumento
+        cb.depositar(200);
         System.out.println(cb.obtenerSaldo());
+
+        //Nosotros podemos depositar cualquier cosa, como por ejemplo numeros negativos como el parametro es de tipo double no tendre problema
+        cb.depositar(-50);
+        System.out.println(cb.obtenerSaldo());
+
+        //Para evitar que un deposito reste dinero,ya que esto en la vida real no tiene logica debemos editar el metodo depositar,para que depositar no nos quede en un estado inconsistente
 
     }
 }
