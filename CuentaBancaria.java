@@ -12,7 +12,8 @@ public class CuentaBancaria {
 
     }
 
-    double obtenerSaldo(){//nos sale error,ya que ,como este metodo nos tiene que devolver algo distinto de vacio,necesitamos si o si la clausula return 
-
+    double obtenerSaldo(){
+        
+        return saldo;
     }
 }

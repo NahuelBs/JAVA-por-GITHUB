@@ -9,5 +9,10 @@ public class Principal {
         cb.alias="miCuenta";
         cb.mostrarDatos();
 
+        System.out.println(cb.saldo);//si nosotros quisieramos mostrar un valor que tiene la cuenta bancaria podemos hacerlo de esta manera 
+
+        //pero si yo no quiero que el saldo se obtenga como en la linea 12,debo crear un metodo en cuenta bancaria para que me de la posibilidad de obtener saldo
+
+        cb.obtenerSaldo();
     }
 }
