@@ -28,4 +28,14 @@ public class CuentaBancaria {
         
         return saldo >= monto;//saldo >= monto ya es una expresion logica es un booleano,java devolvera true o false si se cumple o no la expresion logica
     }
+    
+    void extraer(double monto){//extrear lo hacemos void ya que no estamos simulando un cajero donde debemos tener la plata,solo queremos mostrar como cambia el estado de la cuanta
+
+        if(saldoDisponible(monto))//para no repetir logica de escribir de vuelta saldo >= monto ,se puede reemplazar por el metodo saldoDisponible
+            saldo=saldo-monto;
+
+    }//En void extraer recibimos como parametro la variable monto,esa variable la utilizamos
+    //como argumento para el metodo saldoDisponible,saldoDisponible mandara un true o un false si se comple o no la expresion,y de ahi entrara al if si es true  
+
+    //Podemos llamarlo solamente con el nombre,sin necesidad de agragar una variable.saldoDisponible ya que nos encontramos en LA MISMA CLASE
 }
