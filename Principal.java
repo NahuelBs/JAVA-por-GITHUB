@@ -18,7 +18,7 @@ public class Principal {
         System.out.println(a.color);
         
         a2.color="Azul";//cuando queremos que a2 acceda a su color saldra el error NullPointerException(es decir estamos tratando de acceder a un campo a traves de un punteo nulo,es decir una referencia nula)
-
+                        //es decir queremos guardar un atributo en algo nulo(una variable nula),ya que en este caso no hay ningun objeto guardado en a2
         System.out.println(a.color);
 
     }
