@@ -13,6 +13,12 @@ public class CuentaBancaria {
 
     }
 
+    void establecerAlias(String nuevoAlias){//metodo creado para poder establecer nuevo alias
+        if(nuevoAlias!=null)//validamos si el area no es null
+            alias=nuevoAlias;
+    }
+    //
+
     double obtenerSaldo(){
         
         return saldo;
