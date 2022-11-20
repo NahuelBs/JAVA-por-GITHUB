@@ -1,9 +1,10 @@
 public class CuentaBancaria {
     
-    
-    String CBU;
-    String alias;
-    double saldo;
+    //Para evitar que  se ingrese valores inconsistentes,usaremos modificadores de acceso,pondremos los atributps de la cuenta bancaria como privados
+
+    private String CBU;
+    private String alias;
+    private double saldo;
 
 
     void mostrarDatos(){
