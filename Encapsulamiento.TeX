@@ -1,0 +1,108 @@
+El encapsulamiento es ver a los objetos como capsulas o cajas negras que interectuan entre si, sin conocerse demasiado, y asi y todo poder resolver problemas utilizando esta interaccion entre
+objetos
+
+Existen dos grandes definiciones para encapsulamiento
+1° Deberiamos tomar ciertos atributos y ciertos metodos que hagan a un tipo particular de objeto y envolverlos o encapsularlos en una unica unidad llamada CLASE de esta manera favoreceriamos  la reutilizacion
+de otros proyectos de ese tipo de datos(es decir,que dejamos todo guardado en una clase y luego esa la clase la podremos usar para otros proyectos,por ende podremos usar sus atributos y sus metodos como por ejemplo la clase String)
+2°El encapsulamiento nos habla de que los objetos deberian mantener su integridad OCULTAR sus detalles de implementacion OCULTAR su estado interno para que nadie pueda cambiarlo asi sin mas a su voluntad
+
+
+            Persona
+    ------------------------
+    -DNI:String
+    -nombre:String
+    -apellido:String
+    -calle:String                       DIAGRAMA UML
+    -altura:int
+    -barrio:String
+    ------------------------
+    +domicilioComoCadena():String
+    +nombreCompleto():String
+
+    Los atributos son DNI,nombre,apellido,calle,altura,barrio
+    Los metodos son domicilioComoCadena,nombreCompleto
+
+    2° clase
+
+            Empresa
+    --------------------------
+    -razonSocial:String
+    -CUIT:String
+    -calle:String
+    -altura:int
+    -barrio:String
+    --------------------------
+    +domicilioComoCadena():String
+    +contratar():void
+    pagarSalarios():void
+
+    Notamos que hay ciertos atributos y metodos repetidos en ambas clases,si yo noto que dicho metodos y atributos se repiten ademas que no parecen ser algo exclusivo de esas clases,si no que podemos verlo como una unidad independiente
+    entonces la idea seria que aparezca una nueva clase que encapsule dichos atributos y metodos,asi poder hacer reutilizacion
+
+        Domicilio
+---------------------------------
+    -calle:String
+    -altura:int
+    -barrio:String
+---------------------------------
+domicilioComoCadena():String
+
+
+integridad
+
+Otra cuestion importante es que los objetos garanticen su integridad,es decir que no queden en un estado inconsistente
+
+        CuentaBancaria
+    ------------------------
+    CBU:String
+    alias:String
+    saldo:double
+    ------------------------                            miCuenta.saldo= -123
+    obtenerSaldo():double                               miCuenta.CBU="Hola que tal"
+    depositar(double):void
+    extraer(double):void
+    generarCbu():String
+    saldoSuficiente(double):boolean    
+    
+Podemos ver como ejemplo a la clase cuenta bancaria,donde sus atributos y metodos estan expuestos,eso quiere decir que,si vamos a cualquier otra clase creamos un objeto cuenta Bancaria y lo guardamos
+en la variable mi cuenta,yo podre guardar en mi cuenta un saldo negativo o cualquier CBU,lo cual no nos daria ningun tipo de error,pero para la funcionalidad que yo quiero del programa un saldo negativo no es correcto
+ademas en la vida real,nosotros no podemos establecer asi sin mas el saldo,este debe pasar por distintas operaciones,por lo tanto debemos garantizar que esto no pueda hacerse y para ello se utiliza 
+el concepto de Visibilidad
+
+Encapsular el estado interno 
+
+A partir de ahora casi de forma obligatoria para garantizar el encapsulamiento es colocar a todos los atributos de una clase la visibilidad privada,al ser privada los atributos,el unico capaz de poder
+consultarlo directamente es la propia clase que los declaro y asi entonces cualquier otra clase no podra saber ni siquiera que existen
+
+
+CuentaBancaria
+------------------------
+CBU:String
+alias:String
+saldo:double
+------------------------                            x=miCuenta.saldo
+obtenerSaldo():double                               miCuenta.saldo=miCuenta.saldo+100
+depositar(double):void
+extraer(double):void
+generarCbu():String
+saldoSuficiente(double):boolean
+
+
+CuentaBancaria
+------------------------
+-CBU:String
+-alias:String
+-saldo:double
+------------------------                            x=miCuenta.obtenerSaldo()
++obtenerSaldo():double                              miCuenta.depositar(100) en el metodo depositar,obligamos que el saldo sea positivo
++depositar(double):void
++extraer(double):void
+-generarCbu():String
+-saldoSuficiente(double):boolean
+
+TODOS LOS ATRIBUTOS DEBERAN TENER VISIBILIDAD PRIVADA
+
+
+Ocultar detalles de implementacion
+
+No todos los metodos deben ser publicos si no ,solamente aquellos que yo quiero exponer para que los objetos de otro tipos interactuen entre si para resolver problemas (+ es publico)
