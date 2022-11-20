@@ -33,7 +33,7 @@ public class CuentaBancaria {
     }
     
 
-    boolean saldoDisponible(double monto){
+    private boolean saldoDisponible(double monto){
         
         return saldo >= monto;
     }
@@ -46,3 +46,10 @@ public class CuentaBancaria {
     }
 
 }
+
+//Existen 4 modificadores de acceso en JAVA
+
+//PUBLICO public
+//PRIVADO private 
+//(nada) visibilidad de paqueta,como ambas clases estan en el mismo paquete  se pueden conocer,si la clase principal estuviera en otro paquete,no hubiese podido acceder a los metodos de la clase cuenta bancaria
+
