@@ -17,7 +17,10 @@ public class CuentaBancaria {
         if(nuevoAlias!=null)//validamos si el area no es null
             alias=nuevoAlias;
     }
-    //
+    
+    String obtenerAlias(){//metodo creado para obtener el alias por separado
+        return alias;
+    }
 
     double obtenerSaldo(){
         

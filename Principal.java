@@ -11,8 +11,8 @@ public class Principal {
 
         //Si quiero obtener el alias y guardarlo por separado 
 
-        String a=cb.alias; //saldra un error ya que alias es privado,para ello se crea un metodo 
-
+        String a=cb.obtenerAlias();
+        System.out.println(a);
     }
 }
 
