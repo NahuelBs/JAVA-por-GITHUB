@@ -9,9 +9,10 @@ public class Principal {
         cb.establecerAlias(null);
         cb.mostrarDatos();
 
+        //Si quiero obtener el alias y guardarlo por separado 
+
+        String a=cb.alias; //saldra un error ya que alias es privado,para ello se crea un metodo 
+
     }
 }
 
-//AL ejecutar el programa observamos la primera fila para los 3 casos sale null ya que nunca se asigno un CBU ,la segunda fila es la que nos interesa vemos que para el primer caso el alias es null 
-//ya que no se asigno ningun valor,luegop se lo establecio como mi nuevo alias, y al final se intento establecer un alias en null 
-//pero el metodo no nos deja,por ende lo dejo sin cambiar
