@@ -35,9 +35,7 @@ public class CuentaBancaria {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
+   
 
 
 
@@ -48,6 +46,22 @@ public class CuentaBancaria {
         System.out.println(CBU +" "+ alias +" "+ saldo);
 
     }
+
+    //El uso del this se da en circunstancias bastantes especificas una de ellas es lo que hacemos en la linea 47 ,el this hace referencia a la misma clase que esta siendo llamada en 
+    //este caso cuentabancaria para ser llamada dentro de un metodo
+
+
+    //Otro caso particular seria el siguiente
+
+    public void setSaldo(double saldo) {
+        //this.saldo = saldo;//utilizo el this ya que el parametro tiene el mismo nombre que el atributo de la clase
+        saldo=saldo;
+    } 
+
+    //si quitaramos el this no apareceria ningun error de sintaxis o de punto de vista tecnico,si habra un error logico ya que 
+    //la asignacion del parametro lo tomo como una asignacion consigo mismo ya que los dos llevan el mismo nombre
+
+
    
     void establecerAlias(String nuevoAlias){
         if(nuevoAlias!=null)
