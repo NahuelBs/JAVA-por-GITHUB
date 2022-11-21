@@ -42,14 +42,13 @@ public class CuentaBancaria {
 
 
 
-
-    
     void mostrarDatos(){
 
+        System.out.println(this);//linea para ver que es this
         System.out.println(CBU +" "+ alias +" "+ saldo);
 
     }
-
+   
     void establecerAlias(String nuevoAlias){
         if(nuevoAlias!=null)
             alias=nuevoAlias;
