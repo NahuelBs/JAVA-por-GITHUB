@@ -54,12 +54,9 @@ public class CuentaBancaria {
     //Otro caso particular seria el siguiente
 
     public void setSaldo(double saldo) {
-        //this.saldo = saldo;//utilizo el this ya que el parametro tiene el mismo nombre que el atributo de la clase
-        saldo=saldo;
-    } 
+        this.saldo = saldo;//utilizo el this ya que el parametro tiene el mismo nombre que el atributo de la clase
 
-    //si quitaramos el this no apareceria ningun error de sintaxis o de punto de vista tecnico,si habra un error logico ya que 
-    //la asignacion del parametro lo tomo como una asignacion consigo mismo ya que los dos llevan el mismo nombre
+    } 
 
 
    
@@ -69,7 +66,7 @@ public class CuentaBancaria {
     }
     
     String obtenerAlias(){
-        return alias;
+        return this.alias;//para los metodos que no tiene ambiguedad da lo mismo si va o no el this 
     }
 
     double obtenerSaldo(){
@@ -78,8 +75,9 @@ public class CuentaBancaria {
     }
 
     void depositar(double monto){
-        if(monto > 0)
-            saldo=saldo+monto;
+        if(this.monto > 0)
+            saldo=saldo+this.monto;//pondriamos en un lugar incorrecto el this ya que monto  es el nombre que se decidio darle  al parametro de tipo double que llega desde afuera 
+            //para realizar un deposito,pero no existe NINGUN ATRIBUTO EN LA CLASE CUENTABANCARIA que se llame monto,es decir si la variable no se encuentra como atributo de la clase no podre usar this en ella
     }
     
 
