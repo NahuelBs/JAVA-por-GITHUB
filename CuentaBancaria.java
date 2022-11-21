@@ -1,24 +1,61 @@
 public class CuentaBancaria {
     
-    //Para evitar que  se ingrese valores inconsistentes,usaremos modificadores de acceso,pondremos los atributps de la cuenta bancaria como privados
 
     private String CBU;
+    
+    //getter y setter generado automaticamente para CBU    
+
+    public String getCBU() {
+        return CBU;
+    }
+
+    public void setCBU(String cBU) {
+        CBU = cBU;
+    }
+
+
     private String alias;
+
+    //getter y setter generado automaticamente para alias
+    
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+
     private double saldo;
 
+    //getter y setter generado automaticamente para saldo
+    
+    public double getSaldo() {
+        return saldo;
+    }
 
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+
+
+
+
+    
     void mostrarDatos(){
 
         System.out.println(CBU +" "+ alias +" "+ saldo);
 
     }
 
-    void establecerAlias(String nuevoAlias){//metodo creado para poder establecer nuevo alias
-        if(nuevoAlias!=null)//validamos si el area no es null
+    void establecerAlias(String nuevoAlias){
+        if(nuevoAlias!=null)
             alias=nuevoAlias;
     }
     
-    String obtenerAlias(){//metodo creado para obtener el alias por separado
+    String obtenerAlias(){
         return alias;
     }
 
@@ -45,11 +82,14 @@ public class CuentaBancaria {
 
     }
 
+
+    
+
 }
 
-//Existen 4 modificadores de acceso en JAVA
+//Al poner los atributos privados no podemos acceder a ellos en otra clase,pero si a treves de metodos
 
-//PUBLICO public
-//PRIVADO private 
-//(nada) visibilidad de paqueta,como ambas clases estan en el mismo paquete  se pueden conocer,si la clase principal estuviera en otro paquete,no hubiese podido acceder a los metodos de la clase cuenta bancaria
+//los getters son los metodos que devuelven los valores de los atributos como el obtenersaldo y obtener alias
+
+//los setters permite a un atributo setearlo con un nuevo valor
 
