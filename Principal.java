@@ -1,8 +1,8 @@
 public class Principal {
     public static void main(String[] args) {
       
-        CuentaBancaria cb = new CuentaBancaria();
-        CuentaBancaria cb2 = new CuentaBancaria();
+        CuentaBancaria cb = new CuentaBancaria();//sin saberlo hace rato venimos usando constructores,cada vez que nosotros creamos un objeto de cualquier tipo en este caso cuenta bancaria 
+        CuentaBancaria cb2 = new CuentaBancaria();//lo que hace java es invocar al constructor de la clase en este caso cuenta bancaria al escribir new CuentaBancaria()
         CuentaBancaria cb3 = new CuentaBancaria();
 
         cb.setAlias("miAlias");
@@ -22,10 +22,7 @@ public class Principal {
         cb3.mostrarDatos();
 
     }
-    //vemos que crear algo tan sencillo como crear tres objetos del tipo cuenta bancaria y establecer parcialmente sus atributos  no lleva bastantes lineas de codigos
-    // y muchas de ellas repetidas setTipo,set Alias por mas que tenga valores diferentes
     
-    //para evitar esto se utiliza lo que se conoce como un constructor,que nos va a permitir en una sola linea,no solamente construir el objeto si no tambien darle su estado inicial
 }
 
 

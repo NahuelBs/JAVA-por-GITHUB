@@ -6,6 +6,10 @@ public class CuentaBancaria {
    private String moneda;
    private String tipo;
 
+
+//nosotros nunca dijimos que hay un constructor en la clase cuenta bancaria,pero java lo pone de forma implicita al constructor
+//toda clase en java tendra un constructor sin que nosotros lo sepamos
+
    public void mostrarDatos(){
         System.out.println(CBU+" "+alias+" "+saldo+" "+moneda+" "+tipo);
    }
