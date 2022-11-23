@@ -10,6 +10,18 @@ public class CuentaBancaria {
 //nosotros nunca dijimos que hay un constructor en la clase cuenta bancaria,pero java lo pone de forma implicita al constructor
 //toda clase en java tendra un constructor sin que nosotros lo sepamos
 
+//Ahora que sabemos que java por defecto crea un constructor de forma implicita,lo escribiremos para hacerlo explicito
+
+public CuentaBancaria(){//Constructor
+     System.out.println("Se creo el objeto"+ this);//imprimimos la referencia que se esta creando
+
+}
+//Los constructores no llevan tipo de retorno(ni siquiera void),por que por definicion los constructores devuelven las referencias de los objetos que estan creando y eso se asigna en las variables
+
+//Los constructores se tienen que llamar con exactamente el mismo nombre que la clase,para que java lo detecte como construtor y no como metodo
+
+//El constructor se ejecuta por una unica vez en el ciclo de vida de cada objeto
+
    public void mostrarDatos(){
         System.out.println(CBU+" "+alias+" "+saldo+" "+moneda+" "+tipo);
    }
