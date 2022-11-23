@@ -12,15 +12,21 @@ public class CuentaBancaria {
 
 //Ahora que sabemos que java por defecto crea un constructor de forma implicita,lo escribiremos para hacerlo explicito
 
-public CuentaBancaria(){//Constructor
-     System.out.println("Se creo el objeto"+ this);//imprimimos la referencia que se esta creando
+public CuentaBancaria(String alias,String moneda,String tipo){//Constructor
+//EL mejor lugar para inicializar  a los atributos de todo objeto es el constructor,para ello el constructor debe recibir parametros
+//para que se establezca como valores de los atributos  
+this.alias=alias;
+this.moneda=moneda;
+this.tipo=tipo;
 
 }
 //Los constructores no llevan tipo de retorno(ni siquiera void),por que por definicion los constructores devuelven las referencias de los objetos que estan creando y eso se asigna en las variables
 
 //Los constructores se tienen que llamar con exactamente el mismo nombre que la clase,para que java lo detecte como construtor y no como metodo
 
-//El constructor se ejecuta por una unica vez en el ciclo de vida de cada objeto
+//El constructor se ejecuta por una unica vez en el ciclo de vida de cada 
+
+//Colocar al menos un constructor anula el que Java coloco por defecto
 
    public void mostrarDatos(){
         System.out.println(CBU+" "+alias+" "+saldo+" "+moneda+" "+tipo);
