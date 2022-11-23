@@ -7,18 +7,12 @@ public class CuentaBancaria {
    private String tipo;
 
 
-//nosotros nunca dijimos que hay un constructor en la clase cuenta bancaria,pero java lo pone de forma implicita al constructor
-//toda clase en java tendra un constructor sin que nosotros lo sepamos
-
-//Ahora que sabemos que java por defecto crea un constructor de forma implicita,lo escribiremos para hacerlo explicito
 
 public CuentaBancaria(String alias,String moneda,String tipo){//Constructor
-//EL mejor lugar para inicializar  a los atributos de todo objeto es el constructor,para ello el constructor debe recibir parametros
-//para que se establezca como valores de los atributos  
-this.alias=alias;
-this.moneda=moneda;
-this.tipo=tipo;
-
+//Para este caso no conviene mandar asi nomas los atributos a que puedo mandar cualquier cosa para evitar eso dentro del construtor llamo a los metodos
+     setAlias(alias);
+     setMoneda(moneda);
+     setTipo(tipo);
 }
 //Los constructores no llevan tipo de retorno(ni siquiera void),por que por definicion los constructores devuelven las referencias de los objetos que estan creando y eso se asigna en las variables
 
