@@ -13,3 +13,4 @@ public class Principal {
 }
 
 
+//como curiosidad un Scanner es una sobrecarga de un constructor
