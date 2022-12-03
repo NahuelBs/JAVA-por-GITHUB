@@ -6,7 +6,9 @@ public class CuentaBancaria {
    private String moneda;
    private String tipo;
 
+//Si bien el anterior codigo funciona lo mejoraremos un poco ya que estamos repitiendo codigo y es una de las cosas que no se debe hacer como programador
 
+//vemos que en dos constructores la unica diferencia es la de alias,despues son exactamente identicos
 
 public CuentaBancaria(String alias,String moneda,String tipo){//Constructor
 
@@ -16,21 +18,19 @@ public CuentaBancaria(String alias,String moneda,String tipo){//Constructor
      setTipo(tipo);
 }
 
-//Si quiero construir un objeto cuenta bancaria sin enviar argumentos lo que debo hacer si ya hice un constructor previamente es sobrecargarlo
 
 public CuentaBancaria(){
 
 }
 
 
-//una tercera variante para construir cuentas bancarias podria ser por ejemplo no conocer o no querer dar un alias  y que se genere por defecto
-//generemos entonces un tercer constructor
-
+//Para ello vamos a utilizar el this 
 public CuentaBancaria(String moneda,String tipo){
-     this.CBU=generarCBU();
-     setAlias("Alias,por defecto");
-     setMoneda(moneda);
-     setTipo(tipo);
+     //Vamos a invocar desde aqui a otro constructor de la misma clase usando la palabra THIS,pero esta vez con parentesis
+     this();//dicho parentesis es la principal diferencia entre el this como referencia  y el this como llamado de construtores
+     
+     //Si dejamos solamente el this(); lo que estamos  haciendo es llamar al constructor que no tiene argumentos 
+
 }
 
    private String generarCBU(){
