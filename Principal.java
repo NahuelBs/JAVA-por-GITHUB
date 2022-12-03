@@ -3,9 +3,11 @@ public class Principal {
       
         CuentaBancaria cb = new CuentaBancaria("miAlias","Pesos","Caja de ahorros");
         CuentaBancaria cb2 = new CuentaBancaria();
+        CuentaBancaria cb3 = new CuentaBancaria("Dolares", "Caja de ahorros");
 
         cb.mostrarDatos();
         cb2.mostrarDatos();
+        cb3.mostrarDatos();
     }
     
 }
