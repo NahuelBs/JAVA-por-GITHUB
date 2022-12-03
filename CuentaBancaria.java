@@ -27,10 +27,10 @@ public CuentaBancaria(){
 //Para ello vamos a utilizar el this 
 public CuentaBancaria(String moneda,String tipo){
      //Vamos a invocar desde aqui a otro constructor de la misma clase usando la palabra THIS,pero esta vez con parentesis
-     this();//dicho parentesis es la principal diferencia entre el this como referencia  y el this como llamado de construtores
      
-     //Si dejamos solamente el this(); lo que estamos  haciendo es llamar al constructor que no tiene argumentos 
-
+     this(alias,moneda,tipo);//Siempre se debe apuntar al constructor mas grande que alla y resolviendo el parametro que falta,en este caso el alias
+     
+     //vemos que sale error en alias por que el constructor solo recibe dos variables
 }
 
    private String generarCBU(){
