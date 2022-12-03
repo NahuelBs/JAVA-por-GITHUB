@@ -16,6 +16,14 @@ public CuentaBancaria(String alias,String moneda,String tipo){//Constructor
      setTipo(tipo);
 }
 
+//Si quiero construir un objeto cuenta bancaria sin enviar argumentos lo que debo hacer si ya hice un constructor previamente es sobrecargarlo
+
+public CuentaBancaria(){
+
+}
+
+//observamos que ahora ya no sale el error 
+
    private String generarCBU(){
 
      return "128632734";
