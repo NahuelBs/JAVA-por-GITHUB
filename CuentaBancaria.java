@@ -9,7 +9,8 @@ public class CuentaBancaria {
 
 
 public CuentaBancaria(String alias,String moneda,String tipo){//Constructor
-//Para este caso no conviene mandar asi nomas los atributos a que puedo mandar cualquier cosa para evitar eso dentro del construtor llamo a los metodos
+
+     this.CBU=generarCBU();
      setAlias(alias);
      setMoneda(moneda);
      setTipo(tipo);
@@ -21,6 +22,11 @@ public CuentaBancaria(String alias,String moneda,String tipo){//Constructor
 //El constructor se ejecuta por una unica vez en el ciclo de vida de cada 
 
 //Colocar al menos un constructor anula el que Java coloco por defecto
+
+   private String generarCBU(){
+
+     return "128632734";
+   }
 
    public void mostrarDatos(){
         System.out.println(CBU+" "+alias+" "+saldo+" "+moneda+" "+tipo);
