@@ -15,13 +15,6 @@ public CuentaBancaria(String alias,String moneda,String tipo){//Constructor
      setMoneda(moneda);
      setTipo(tipo);
 }
-//Los constructores no llevan tipo de retorno(ni siquiera void),por que por definicion los constructores devuelven las referencias de los objetos que estan creando y eso se asigna en las variables
-
-//Los constructores se tienen que llamar con exactamente el mismo nombre que la clase,para que java lo detecte como construtor y no como metodo
-
-//El constructor se ejecuta por una unica vez en el ciclo de vida de cada 
-
-//Colocar al menos un constructor anula el que Java coloco por defecto
 
    private String generarCBU(){
 
